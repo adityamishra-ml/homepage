@@ -20,48 +20,61 @@
     </div>
   </nav>
 
-  <main class="container">
-    <h2>Contact Me</h2>
-    <p style="color: var(--text-light); margin-bottom: 2rem;">
-      Please feel free to reach out on any of the following platforms for collaboration:
-    </p>
+<main class="container">
+  <h2>Contact Me</h2>
+  <p style="color: var(--text-light); margin-bottom: 2rem;">
+    Please feel free to reach out on any of the following platforms for collaboration:
+  </p>
 
-    <ul class="grid-2" style="align-items: center; gap: 1.5rem;">
-      <!-- Email -->
-      <li class="card" style="display: flex; align-items: center; gap: 1rem;">
-        <img src="images/email.png" alt="Email" width="32" height="32">
-        <a href="mailto:aditya21@iiserb.ac.in" style="color: var(--primary);">
-          aditya21[at]iiserb.ac.in
-        </a>
-      </li>
+  <ul
+    style="
+      display: flex;
+      flex-wrap: nowrap;           /* all items in one line */
+      justify-content: space-between;
+      gap: 0.5rem;                 /* tighter spacing */
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    "
+  >
+    <!-- Email -->
+    <li class="card" style="flex: 1; display: flex; align-items: center; gap: 0.5rem;">
+      <i class="fas fa-envelope fa-lg" style="color: var(--primary)"></i>
+      <a href="mailto:aditya21@iiserb.ac.in" style="color: var(--primary);">
+        aditya21[at]iiserb.ac.in
+      </a>
+    </li>
 
-      <!-- LinkedIn -->
-      <li class="card" style="display: flex; align-items: center; gap: 1rem;">
-        <img src="images/linkedin.png" alt="LinkedIn" width="20" height="32">
-        <a href="https://www.linkedin.com/in/adityamishraaaa" target="_blank" rel="noopener"
-           style="color: var(--primary);">
-          LinkedIn
-        </a>
-      </li>
+    <!-- LinkedIn -->
+    <li class="card" style="flex: 1; display: flex; align-items: center; gap: 0.5rem;">
+      <i class="fab fa-linkedin fa-lg" style="color: var(--primary)"></i>
+      <a
+        href="https://www.linkedin.com/in/adityamishraaaa"
+        target="_blank" rel="noopener"
+        style="color: var(--primary);"
+      >LinkedIn</a>
+    </li>
 
-      <!-- Google Scholar -->
-      <li class="card" style="display: flex; align-items: center; gap: 1rem;">
-        <img src="images/scholar.png" alt="Google Scholar" width="32" height="32">
-        <a href="https://scholar.google.co.in/citations?user=mCs2-FQAAAAJ&hl=en" target="_blank" rel="noopener"
-           style="color: var(--primary);">
-          Google Scholar
-        </a>
-      </li>
+    <!-- Google Scholar -->
+    <li class="card" style="flex: 1; display: flex; align-items: center; gap: 0.5rem;">
+      <i class="fas fa-graduation-cap fa-lg" style="color: var(--primary)"></i>
+      <a
+        href="https://scholar.google.co.in/citations?user=mCs2-FQAAAAJ&hl=en"
+        target="_blank" rel="noopener"
+        style="color: var(--primary);"
+      >Google Scholar</a>
+    </li>
 
-      <!-- GitHub -->
-      <li class="card" style="display: flex; align-items: center; gap: 1rem;">
-        <img src="images/github.png" alt="GitHub" width="20" height="32">
-        <a href="https://github.com/adityamishraaaa" target="_blank" rel="noopener"
-           style="color: var(--primary);">
-          GitHub
-        </a>
-      </li>
-    </ul>
-  </main>
+    <!-- GitHub -->
+    <li class="card" style="flex: 1; display: flex; align-items: center; gap: 0.5rem;">
+      <i class="fab fa-github fa-lg" style="color: var(--primary)"></i>
+      <a
+        href="https://github.com/adityamishraaaa"
+        target="_blank" rel="noopener"
+        style="color: var(--primary);"
+      >GitHub</a>
+    </li>
+  </ul>
+</main>
 </body>
 </html>
