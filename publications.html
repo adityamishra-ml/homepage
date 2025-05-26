@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Publications – My Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">My Website</div>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Publications</h2>
+    <p style="color:var(--text-light); margin-bottom:1rem;">
+      A selection of my peer‐reviewed work in AI, ML, and signal processing.
+    </p>
+
+    <input type="search" placeholder="Search by title or author…" />
+
+    <ul class="pub-list">
+      <li>
+        <div class="pub-info">
+          <h3>DECODE: Energy Prediction</h3>
+          <p>Aditya Mishra, et al.</p>
+          <p>Energy &amp; Buildings (2024)</p>
+        </div>
+        <a href="#">View Paper</a>
+      </li>
+      <li>
+        <div class="pub-info">
+          <h3>EEG Representation Learning</h3>
+          <p>Aditya Mishra, Ahnaf Mozib, et al.</p>
+          <p>ICASSP 2025 (submitted)</p>
+        </div>
+        <a href="#">View Paper</a>
+      </li>
+      <!-- more <li> entries here -->
+    </ul>
+
+    <div class="pagination">
+      <a href="#" class="page-link disabled">‹</a>
+      <a href="#" class="page-link active">1</a>
+      <a href="#" class="page-link">2</a>
+      <a href="#" class="page-link">3</a>
+      <span>…</span>
+      <a href="#" class="page-link">10</a>
+      <a href="#" class="page-link">›</a>
+    </div>
+  </main>
+</body>
+</html>

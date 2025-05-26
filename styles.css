@@ -1,0 +1,233 @@
+/* styles.css */
+:root {
+  --primary: #1d4ed8;
+  --text-dark: #111;
+  --text-light: #555;
+  --border: #e5e7eb;
+  --bg-nav: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ─── NAVBAR ───────────────────────────────────────────────────────────────── */
+
+nav {
+  background: var(--bg-nav);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .nav-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  padding-bottom: 0.25rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+/* ─── HEADINGS ──────────────────────────────────────────────────────────────── */
+
+h1, h2, h3 {
+  color: var(--text-dark);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* ─── SEARCH INPUT ──────────────────────────────────────────────────────────── */
+
+input[type="search"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* ─── PROJECT CARDS ────────────────────────────────────────────────────────── */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: box-shadow .2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ─── PUBLICATIONS LIST ─────────────────────────────────────────────────────── */
+
+.pub-list {
+  list-style: none;
+}
+
+.pub-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.pub-info h3 {
+  margin-bottom: 0.25rem;
+}
+
+.pub-info p {
+  margin-bottom: 0.25rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* ─── PAGINATION ───────────────────────────────────────────────────────────── */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.page-link {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+.page-link:hover {
+  background: #f9fafb;
+}
+
+.page-link.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.page-link.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ─── GALLERY ──────────────────────────────────────────────────────────────── */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform .2s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ─── CONTACT FORM ─────────────────────────────────────────────────────────── */
+
+form .form-group {
+  margin-bottom: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+form button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #1e40af;
+}
