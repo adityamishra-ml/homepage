@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Contact – My Website</title>
+  <title>Contact – Aditya Mishra</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav>
     <div class="nav-inner">
-      <div class="brand">My Website</div>
+      <div class="brand">Aditya Mishra</div>
       <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -22,21 +22,51 @@
 
   <main class="container">
     <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <div class="form-group">
-        <label>Name</label>
-        <input type="text" name="name" required>
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" name="_replyto" required>
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit">Send Message</button>
-    </form>
+    <p style="color: var(--text-light); margin-bottom: 2rem;">
+      Please feel free to reach out on any of the following platforms for collaboration:
+    </p>
+
+    <ul class="grid-2" style="align-items: center; gap: 1.5rem;">
+      <!-- Email -->
+      <li class="card" style="display: flex; align-items: center; gap: 1rem;">
+        <img src="images/email.png" alt="Email" width="32" height="32">
+        <a href="mailto:aditya21@iiserb.ac.in" style="color: var(--primary);">
+          aditya21[at]iiserb.ac.in
+        </a>
+      </li>
+
+      <!-- LinkedIn -->
+      <li class="card" style="display: flex; align-items: center; gap: 1rem;">
+        <img src="images/linkedin.png" alt="LinkedIn" width="32" height="32">
+        <a href="https://www.linkedin.com/in/adityamishraaaa" target="_blank" rel="noopener"
+           style="color: var(--primary);">
+          linkedin.com/in/username
+        </a>
+      </li>
+
+      <!-- Insert some line -->
+      <li class="card" style="grid-column: span 2; text-align: center; color: var(--text-light);">
+        “Connect with me to explore research, projects, or just chat about ML and AI!”
+      </li>
+
+      <!-- Google Scholar -->
+      <li class="card" style="display: flex; align-items: center; gap: 1rem;">
+        <img src="images/scholar.png" alt="Google Scholar" width="32" height="32">
+        <a href="https://scholar.google.co.in/citations?user=mCs2-FQAAAAJ&hl=en" target="_blank" rel="noopener"
+           style="color: var(--primary);">
+          Google Scholar Profile
+        </a>
+      </li>
+
+      <!-- GitHub -->
+      <li class="card" style="display: flex; align-items: center; gap: 1rem;">
+        <img src="images/github.png" alt="GitHub" width="32" height="32">
+        <a href="https://github.com/adityamishraaaa" target="_blank" rel="noopener"
+           style="color: var(--primary);">
+          github.com/your-username
+        </a>
+      </li>
+    </ul>
   </main>
 </body>
 </html>
