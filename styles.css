@@ -231,3 +231,48 @@ form button {
 form button:hover {
   background: #1e40af;
 }
+
+.profile-wrapper {
+  padding: 2rem;
+}
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Photo column */
+.profile__photo img {
+  display: block;
+  max-width: 180px;
+  border-radius: 50%;
+}
+
+/* Thin vertical line */
+.profile__separator {
+  width: 1px;
+  background-color: #ddd;
+  margin: 0 2rem;
+  /* stretch the separator to the full height of its siblings */
+  align-self: stretch;
+}
+
+/* Text column */
+.profile__info {
+  flex: 1;
+  /* optional: add a bit of padding to your text block */
+  padding-right: 1rem;
+}
+
+/* Responsive tweak: stack on small screens */
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+  }
+  .profile__separator {
+    display: none;
+  }
+  .profile__photo {
+    margin-bottom: 1.5rem;
+  }
+}

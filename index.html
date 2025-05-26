@@ -5,13 +5,50 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>About – Aditya Mishra</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ────────── PROFILE LAYOUT ────────── */
+    .profile-wrapper {
+      margin-top: 2rem;
+    }
+    .profile {
+      display: flex;
+      align-items: flex-start;
+    }
+    .profile__photo img {
+      display: block;
+      object-fit: cover;
+      width: 250px;
+      border-radius: 20%;
+    }
+    .profile__separator {
+      width: 1px;
+      background-color: #ddd;
+      margin: 0 2rem;
+      align-self: stretch; /* make the line as tall as the photo/text block */
+    }
+    .profile__info {
+      flex: 1;
+    }
+    /* Responsive: stack on narrow screens */
+    @media (max-width: 600px) {
+      .profile {
+        flex-direction: column;
+      }
+      .profile__separator {
+        display: none;
+      }
+      .profile__photo {
+        margin-bottom: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
     <div class="nav-inner">
       <div class="brand">Aditya Mishra</div>
       <ul>
-        <li><a href="index.html" class="active">About</a></li>
+        <li><a href="index.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -23,43 +60,41 @@
   <main class="container">
     <h2>About Me</h2>
 
-    <!-- centered profile picture -->
-    <div style="text-align:center; margin:2rem 0;">
-      <img
-        src="images/myphoto.JPG"
-        alt="My Photo"
-        style="
-          display: block;
-          object-fit: cover;
-          margin: 0 auto;
-          width: 250px;
-          border-radius: 20%;
-        "
-      >
+    <div class="profile-wrapper">
+      <div class="profile">
+        <!-- LEFT: your photo -->
+        <div class="profile__photo">
+          <img src="images/myphoto.JPG" alt="My Photo">
+        </div>
+
+        <!-- MIDDLE: thin separator -->
+        <div class="profile__separator"></div>
+
+        <!-- RIGHT: your text -->
+        <div class="profile__info">
+          <p style="text-align: justify; color: var(--text-light); margin-bottom: 1.5rem;">
+            I am a fourth-year student pursuing my Bachelor of Science (BS) in Electrical Engineering and
+            Computer Science with a minor in Data Science at the Indian Institute of Science Education
+            and Research Bhopal. I am a data-science enthusiast, interested in application of machine
+            learning and deep learning techniques to tackle real-world problems. I also have an
+            inclination towards Finance. Outside of research I love playing soccer and
+            exploring new places.
+          </p>
+
+          <p style="text-align: justify; color: var(--text-light);">
+            Feel free to explore the
+            <a href="projects.html" style="color: var(--primary); text-decoration: none;">
+              Projects
+            </a>
+            section to learn more about my work. Please
+            <a href="contact.html" style="color: var(--primary); text-decoration: none;">
+              reach out
+            </a>
+            to me for any potential collaboration or research opportunities.
+          </p>
+        </div>
+      </div>
     </div>
-
-    <!-- first paragraph: justified -->
-    <p style="text-align: justify; color: var(--text-light); margin-bottom: 1.5rem;">
-      I am a fourth-year student pursuing my Bachelor of Science (BS) in Electrical Engineering and
-      Computer Science with a minor in Data Science at the Indian Institute of Science Education
-      and Research Bhopal. I am a data-science enthusiast, interested in application of machine
-      learning and deep learning techniques to tackle real-world problems. I also have an
-      inclination towards Finance. Outside of research I love playing soccer and
-      exploring new places.
-    </p>
-
-    <!-- second paragraph: justified, “Projects” hyperlinked -->
-    <p style="text-align: justify; color: var(--text-light);">
-      Feel free to explore the
-      <a href="projects.html" style="color: var(--primary); text-decoration: none;">
-        Projects
-      </a>
-      section to learn more about my work. Please 
-      <a href="contact.html" style="color: var(--primary); text-decoration: none;">
-        reach out
-      </a>
-      to me for any potential collaboration or research opportunities.
-    </p>
   </main>
 </body>
 </html>
