@@ -276,3 +276,49 @@ form button:hover {
     margin-bottom: 1.5rem;
   }
 }
+
+/* ─── CV PAGE STYLES ───────────────────────────────────────────────────────── */
+
+.cv-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cv-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+.cv-section {
+  margin-bottom: 2rem;
+}
+
+.cv-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.25rem;
+}
+
+.cv-section ul {
+  list-style: disc inside;
+  margin-left: 0;
+  color: var(--text-light);
+}
+
+.cv-section ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* a little tighter spacing for tables of Rapid Data like skills or coursework */
+.cv-bullet-list li {
+  margin-bottom: 0.25rem;
+}
+
+/* Make publication entries a bit more compact */
+.cv-publications li {
+  margin-bottom: 0.75rem;
+}
