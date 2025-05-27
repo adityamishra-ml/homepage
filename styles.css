@@ -242,11 +242,11 @@ form button:hover {
 }
 
 /* Photo column */
-.profile__photo img {
+/* .profile__photo img {
   display: block;
   max-width: 180px;
   border-radius: 50%;
-}
+} */
 
 /* Thin vertical line */
 .profile__separator {
