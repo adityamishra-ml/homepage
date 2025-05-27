@@ -343,8 +343,8 @@ form button:hover {
 /* ─── CAROUSEL CONTROLS (Gallery) ─────────────────────────────────────────────────────── */
 .carousel {
   position: relative;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 800px;
+  max-height: 800px;
   margin: 2rem auto;
   overflow: hidden;
   border-radius: 8px;
