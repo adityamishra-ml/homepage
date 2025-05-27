@@ -326,9 +326,11 @@ form button:hover {
 /* ─── PDF EMBEDDER ─────────────────────────────────────────────────────────── */
 
 .pdf-container {
-  width: 100%;
-  height: calc(100vh - 140px); /* adjust so it fills most of the viewport minus nav */
-  margin-top: 2rem;
+  width: 1000px;
+  height: 1000px;
+  margin: 2rem auto;       /* centers horizontally and adds top/bottom spacing */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 1px solid var(--border);
 }
 
 .pdf-container iframe,
