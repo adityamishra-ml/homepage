@@ -343,54 +343,31 @@ form button:hover {
 /* ─── CAROUSEL CONTROLS (Gallery) ─────────────────────────────────────────────────────── */
 .carousel {
   position: relative;
-  max-width: 400px;              /* fixed width */
-  max-height: 400px;             /* fixed height */
+  max-width: 400px;
+  max-height: 400px;
   margin: 2rem auto;
   overflow: hidden;
   border-radius: 8px;
-  background: #000;          /* ensure a dark backdrop so white arrows stand out */
 }
 
 .carousel img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
   display: block;
 }
 
-.carousel-control {
+.carousel-caption {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
   color: #fff;
-  font-size: 2rem;
-  padding: 0 0.5rem;
-  border: none;
-  cursor: pointer;
-  z-index: 1000;             /* sit on top of the image */
-  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  text-align: center;
 }
 
-.carousel-control.prev {
-  left: 0.5rem;
-}
-
-.carousel-control.next {
-  right: 0.5rem;
-}
-
-.fade {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.fade.show {
-  opacity: 1;
-}
-
-/* hide the old grid */
+/* hide the old gallery-grid when using carousel */
 .gallery-grid {
   display: none;
 }
-
