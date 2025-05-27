@@ -339,3 +339,66 @@ form button:hover {
   height: 100%;
   border: none;
 }
+
+/* ─── CAROUSEL CONTROLS (Gallery) ─────────────────────────────────────────────────────── */
+
+.carousel {
+  position: relative;
+  max-width: 1000px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000; /* for a consistent backdrop */
+}
+
+.carousel img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Prev/Next buttons */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+}
+.carousel-control.prev {
+  left: 1rem;
+}
+.carousel-control.next {
+  right: 1rem;
+}
+
+/* fade effect */
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.fade.show {
+  opacity: 1;
+}
+
+/* hide original grid */
+.gallery-grid {
+  display: none;
+}

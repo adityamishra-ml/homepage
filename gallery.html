@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Gallery – Aditya Mishra</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* optional: a little fade effect */
+    .fade {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .fade.show {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -23,6 +33,14 @@
 
   <main class="container">
     <h2>Gallery</h2>
+
+    <!-- CAROUSEL -->
+    <div class="carousel">
+      <img id="carousel-image" src="images/photo1.jpg" alt="carousel slide">
+      <div id="carousel-caption" class="carousel-caption">Caption for Photo 1</div>
+    </div>
+
+    <!-- ORIGINAL GRID (optional fallback) -->
     <div class="gallery-grid">
       <div class="gallery-item"><img src="images/photo1.jpg" alt=""></div>
       <div class="gallery-item"><img src="images/photo2.jpg" alt=""></div>
@@ -30,5 +48,42 @@
       <!-- more images… -->
     </div>
   </main>
+
+  <script>
+    (function() {
+      const slides = [
+        { src: 'images/queens1.jpg', caption: 'May 13, 2024: Joined Queen\'s University as an Intern'},
+        { src: 'images/queens2.jpg', caption: 'August 02, 2024: Conclusion of Mitacs GRI' },
+        { src: 'images/icassp25.jpg', caption: 'April 10, 2025: Lecture at the IEEE ICASSP' },
+        // add more here as needed
+      ];
+
+      let idx = 0;
+      const imgEl = document.getElementById('carousel-image');
+      const capEl = document.getElementById('carousel-caption');
+
+      function showSlide(i) {
+        imgEl.classList.remove('show');
+        capEl.classList.remove('show');
+
+        // small timeout for fade-out/in effect
+        setTimeout(() => {
+          imgEl.src = slides[i].src;
+          capEl.textContent = slides[i].caption;
+          imgEl.classList.add('fade', 'show');
+          capEl.classList.add('fade', 'show');
+        }, 100);
+      }
+
+      // initial display
+      showSlide(idx);
+
+      // advance every 2 seconds
+      setInterval(() => {
+        idx = (idx + 1) % slides.length;
+        showSlide(idx);
+      }, 2000);
+    })();
+  </script>
 </body>
 </html>
