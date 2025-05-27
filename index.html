@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     /* ─────── NAV BRAND (for reference) ─────── */
-    /* If your styles.css sets .nav-inner .brand font-size, you can skip this. */
+    /* If your styles.css already sets .nav-inner .brand font-size, you can omit this. */
     /* .nav-inner .brand { font-size: 1.5rem; } */
 
     /* ────────── PROFILE LAYOUT ────────── */
@@ -26,8 +26,8 @@
     .profile__photo img {
       display: block;
       object-fit: cover;
-      width: 400px;
-      border-radius: 10%;
+      width: 250px;
+      border-radius: 20%;
       margin: 0 auto;
     }
     .profile__name {
@@ -44,22 +44,12 @@
     .profile__links {
       display: flex;
       justify-content: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+      gap: 0.75rem;
     }
-    .profile__links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.4rem 0.6rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      text-decoration: none;
-      color: inherit;
-      font-size: 0.875rem;
-    }
-    .profile__links a:hover {
-      background-color: #f5f5f5;
+    .profile__links a img {
+      display: block;
+      width: 24px;
+      height: 24px;
     }
 
     /* SEPARATOR */
@@ -122,7 +112,7 @@
     <div class="profile-wrapper">
       <div class="profile">
 
-        <!-- LEFT: Photo + Name + Affiliation + Links -->
+        <!-- LEFT: Photo + Name + Affiliation + Icon-only Links -->
         <div class="profile__photo">
           <img src="images/myphoto.JPG" alt="My Photo">
           <h3 class="profile__name">Aditya Mishra</h3>
@@ -131,10 +121,18 @@
             Minor in Data Science, IISER Bhopal
           </p>
           <div class="profile__links">
-            <a href="mailto:aditya21@iiserb.ac.in">✉ Email</a>
-            <a href="https://github.com/adityamishraaaa" target="_blank" rel="noopener">🐙 GitHub</a>
-            <a href="https://scholar.google.co.in/citations?user=mCs2-FQAAAAJ&hl=en" target="_blank" rel="noopener">🎓 Google Scholar</a>
-            <a href="https://blueskyweb.xyz/u/adityamishraaaa" target="_blank" rel="noopener">🦋 Bluesky</a>
+            <a href="mailto:aditya21@iiserb.ac.in">
+              <img src="images/mail.png" alt="Email">
+            </a>
+            <a href="https://www.linkedin.com/in/adityamishraaaa" target="_blank" rel="noopener">
+              <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/adityamishraaaa" target="_blank" rel="noopener">
+              <img src="images/github.png" alt="GitHub">
+            </a>
+            <a href="https://scholar.google.co.in/citations?user=mCs2-FQAAAAJ&hl=en" target="_blank" rel="noopener">
+              <img src="images/scholar.png" alt="Google Scholar">
+            </a>
           </div>
         </div>
 
