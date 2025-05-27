@@ -341,64 +341,56 @@ form button:hover {
 }
 
 /* ─── CAROUSEL CONTROLS (Gallery) ─────────────────────────────────────────────────────── */
-
 .carousel {
   position: relative;
-  max-width: 400px;
+  max-width: 600px;              /* fixed width */
+  max-height: 600px;             /* fixed height */
   margin: 2rem auto;
   overflow: hidden;
   border-radius: 8px;
-  background: #000; /* for a consistent backdrop */
+  background: #000;          /* ensure a dark backdrop so white arrows stand out */
 }
 
 .carousel img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-.carousel-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  text-align: center;
-}
-
-/* Prev/Next buttons */
 .carousel-control {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   color: #fff;
-  border: none;
   font-size: 2rem;
-  padding: 0.25rem 0.75rem;
+  padding: 0 0.5rem;
+  border: none;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1000;             /* sit on top of the image */
   border-radius: 4px;
 }
+
 .carousel-control.prev {
-  left: 1rem;
-}
-.carousel-control.next {
-  right: 1rem;
+  left: 0.5rem;
 }
 
-/* fade effect */
+.carousel-control.next {
+  right: 0.5rem;
+}
+
 .fade {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
+
 .fade.show {
   opacity: 1;
 }
 
-/* hide original grid */
+/* hide the old grid */
 .gallery-grid {
   display: none;
 }
+
