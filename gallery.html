@@ -6,57 +6,14 @@
   <title>Gallery – Aditya Mishra</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* ─── CAROUSEL LAYOUT ──────────────────────────────────────────────────── */
-    .carousel {
-      position: relative;
-      width: 400px;
-      height: 400px;
-      margin: 2rem auto;
-      overflow: hidden;
-      border-radius: 8px;
-      background: #000;
+    /* optional: a little fade effect */
+    .fade {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
     }
-    .carousel img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+    .fade.show {
+      opacity: 1;
     }
-    .carousel-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.5);
-      color: #fff;
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    /* ─── CONTROLS ─────────────────────────────────────────────────────────── */
-    .carousel-control {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      font-size: 1.5rem;
-      padding: 0 0.5rem;
-      border: none;
-      cursor: pointer;
-      z-index: 10;
-      border-radius: 4px;
-    }
-    .carousel-control.prev { left: 0.5rem; }
-    .carousel-control.next { right: 0.5rem; }
-
-    /* ─── FADE EFFECT ──────────────────────────────────────────────────────── */
-    .fade { opacity: 0; transition: opacity 0.5s ease-in-out; }
-    .fade.show { opacity: 1; }
-
-    /* ─── HIDE GRID WHEN CAROUSEL ACTIVE ───────────────────────────────────── */
-    .gallery-grid { display: none; }
   </style>
 </head>
 <body>
@@ -77,74 +34,55 @@
   <main class="container">
     <h2>Gallery</h2>
 
+    <!-- CAROUSEL -->
     <div class="carousel">
-      <button class="carousel-control prev">&#10094;</button>
-      <button class="carousel-control next">&#10095;</button>
-      <img id="carousel-image" src="images/queens1.jpg" alt="Slide" class="fade">
-      <div id="carousel-caption" class="carousel-caption fade">
-        May 13, 2024: Joined Queen's University as an Intern
-      </div>
+      <img id="carousel-image" src="images/photo1.jpg" alt="carousel slide">
+      <div id="carousel-caption" class="carousel-caption">Caption for Photo 1</div>
     </div>
 
-    <!-- fallback grid -->
+    <!-- ORIGINAL GRID (optional fallback) -->
     <div class="gallery-grid">
-      <div class="gallery-item"><img src="images/queens1.jpg" alt=""></div>
-      <div class="gallery-item"><img src="images/queens2.jpg" alt=""></div>
-      <div class="gallery-item"><img src="images/icassp25.jpg" alt=""></div>
-      <!-- more… -->
+      <div class="gallery-item"><img src="images/photo1.jpg" alt=""></div>
+      <div class="gallery-item"><img src="images/photo2.jpg" alt=""></div>
+      <div class="gallery-item"><img src="images/photo3.jpg" alt=""></div>
+      <!-- more images… -->
     </div>
   </main>
 
   <script>
     (function() {
       const slides = [
-        { src: 'images/queens1.jpg', caption: "May 13, 2024: Joined Queen's University as an Intern" },
+        { src: 'images/queens1.jpg', caption: 'May 13, 2024: Joined Queen\'s University as an Intern'},
         { src: 'images/queens2.jpg', caption: 'August 02, 2024: Conclusion of Mitacs GRI' },
         { src: 'images/icassp25.jpg', caption: 'April 10, 2025: Lecture at the IEEE ICASSP' },
-        // …add more slides here…
+        // add more here as needed
       ];
 
-      let idx = 0, timer;
+      let idx = 0;
       const imgEl = document.getElementById('carousel-image');
       const capEl = document.getElementById('carousel-caption');
-      const prevBtn = document.querySelector('.carousel-control.prev');
-      const nextBtn = document.querySelector('.carousel-control.next');
 
       function showSlide(i) {
         imgEl.classList.remove('show');
         capEl.classList.remove('show');
+
+        // small timeout for fade-out/in effect
         setTimeout(() => {
           imgEl.src = slides[i].src;
           capEl.textContent = slides[i].caption;
-          imgEl.classList.add('show');
-          capEl.classList.add('show');
+          imgEl.classList.add('fade', 'show');
+          capEl.classList.add('fade', 'show');
         }, 100);
       }
 
-      function startAuto() {
-        timer = setInterval(() => {
-          idx = (idx + 1) % slides.length;
-          showSlide(idx);
-        }, 3000);
-      }
+      // initial display
+      showSlide(idx);
 
-      prevBtn.addEventListener('click', () => {
-        clearInterval(timer);
-        idx = (idx - 1 + slides.length) % slides.length;
-        showSlide(idx);
-        startAuto();
-      });
-
-      nextBtn.addEventListener('click', () => {
-        clearInterval(timer);
+      // advance every 2 seconds
+      setInterval(() => {
         idx = (idx + 1) % slides.length;
         showSlide(idx);
-        startAuto();
-      });
-
-      // init
-      showSlide(idx);
-      startAuto();
+      }, 3000);
     })();
   </script>
 </body>
