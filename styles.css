@@ -322,3 +322,18 @@ form button:hover {
 .cv-publications li {
   margin-bottom: 0.75rem;
 }
+
+/* ─── PDF EMBEDDER ─────────────────────────────────────────────────────────── */
+
+.pdf-container {
+  width: 100%;
+  height: calc(100vh - 140px); /* adjust so it fills most of the viewport minus nav */
+  margin-top: 2rem;
+}
+
+.pdf-container iframe,
+.pdf-container object {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
