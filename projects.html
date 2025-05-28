@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Projects – Aditya Mishra</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Force exactly two columns in each project‐group */
+    .project-group .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -51,7 +59,13 @@
           <a href="projects/pressureplate.html" style="color: var(--primary);">View →</a>
         </div>
 
-        <!-- more cards… -->
+        <div class="card">
+          <h3>MailPal Task Scheduling</h3>
+          <p style="text-align: justify; color: var(--text-light);">
+            Optimization (MTH-308) course project implementing min–max tours for mail delivery tasks.
+          </p>
+          <a href="projects/mailpal.html" style="color: var(--primary);">View →</a>
+        </div>
       </div>
     </section>
 
