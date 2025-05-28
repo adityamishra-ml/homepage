@@ -7,43 +7,35 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
-      <div class="brand">Aditya Mishra</div>
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="cv.html">CV</a></li>
-      </ul>
-    </div>
-  </nav>
+  <nav>…</nav>
 
   <main class="container">
     <h2>Projects</h2>
-    <h3>IISER Bhopal</h3>
-    <div class="grid-2">
-      <div class="card">
-        <h3>Pothole Detection</h3>
-        <p style="text-align: justify; color: var(--text-light);">
-          Computer Vision (DSE-312) course project focusing on pothole detection using YOLOv11.
-        </p>
-        <a href="pothole.html" style="color: var(--primary);">View →</a>
+
+    <section class="project-group">
+      <h3>IISER Bhopal</h3>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Pothole Detection</h3>
+          <p style="text-align: justify; color: var(--text-light);">
+            Computer Vision (DSE-312) course project focusing on pothole detection using YOLOv11.
+          </p>
+          <a href="pothole.html" style="color: var(--primary);">View →</a>
+        </div>
+
+        <div class="card">
+          <h3>Augmentation Matters</h3>
+          <p style="text-align: justify; color: var(--text-light);">
+            Deep Learning (DSE-316) course project focusing on semi-supervised semantic segmentation.
+          </p>
+          <a href="augseg.html" style="color: var(--primary);">View →</a>
+        </div>
+
+        <!-- more cards… -->
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Augmentation Matters</h3>
-        <p style="text-align: justify; color: var(--text-light);">
-          Deep Learning (DSE-316) course project focusing on semi-supervised semantic segmentation.
-        </p>
-        <a href="augseg.html" style="color: var(--primary);">View →</a>
-      </div>
-
-      <!-- add more .card blocks here -->
-
-    </div>
+    <!-- you can add more <section class="project-group"> for other orgs -->
   </main>
 </body>
 </html>
