@@ -7,7 +7,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>…</nav>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">Aditya Mishra</div>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <main class="container">
     <h2>Projects</h2>
@@ -20,7 +32,7 @@
           <p style="text-align: justify; color: var(--text-light);">
             Computer Vision (DSE-312) course project focusing on pothole detection using YOLOv11.
           </p>
-          <a href="pothole.html" style="color: var(--primary);">View →</a>
+          <a href="projects/pothole.html" style="color: var(--primary);">View →</a>
         </div>
 
         <div class="card">
@@ -28,7 +40,15 @@
           <p style="text-align: justify; color: var(--text-light);">
             Deep Learning (DSE-316) course project focusing on semi-supervised semantic segmentation.
           </p>
-          <a href="augseg.html" style="color: var(--primary);">View →</a>
+          <a href="projects/augseg.html" style="color: var(--primary);">View →</a>
+        </div>
+
+        <div class="card">
+          <h3>Pressure Plate</h3>
+          <p style="text-align: justify; color: var(--text-light);">
+            Reinforcement Learning (ECS-427) course project exploring multi-agent systems in cooperative environments.
+          </p>
+          <a href="projects/pressureplate.html" style="color: var(--primary);">View →</a>
         </div>
 
         <!-- more cards… -->
