@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>BS Thesis – Aditya Mishra</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">Aditya Mishra</div>
+      <ul>
+        <li><a href="../index.html">About</a></li>
+        <li><a href="../research.html" class="active">Research</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../cv.html">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Privacy-Preserving Machine Learning Models</h2>
+
+    <!-- Abstract -->
+    <section class="cv-section">
+      <h3>Abstract</h3>
+      <p style="text-align: justify;">
+        In academic settings, the demanding environment often forces students to prioritize academic performance over their 
+        physical well-being. Moreover, privacy concerns and the inherent risk of data breaches hinder the deployment of 
+        traditional machine learning techniques for addressing these health challenges. In this study, we introduce RiM:
+        Record, Improve, and Maintain, a mobile application which incorporates a novel personalized machine learning framework 
+        that leverages federated learning to enhance students’ physical well-being by analyzing their lifestyle habits.
+
+      </p>
+      <p style="text-align: justify;">
+        Our approach involves pre-training a multilayer perceptron (MLP) model on a large-scale simulated dataset to generate 
+        personalized recommendations. Subsequently, we employ federated learning to fine-tune the model using data from IISER 
+        Bhopal students, thereby ensuring its applicability in real-world scenarios. The federated learning approach guarantees 
+        differential privacy by exclusively sharing model weights rather than raw data. Experimental results show that the 
+        FedAvg–based RiM model achieves an average accuracy of 60.71% and a mean absolute error of 0.91—outperforming the 
+        FedPer variant (average accuracy 46.34%, MAE 1.19)—thereby demonstrating its efficacy in predicting lifestyle deficits 
+        under privacy-preserving constraints.
+      </p>
+    </section>
+
+    <!-- Resources -->
+    <section class="cv-section">
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="https://drive.google.com/file/d/1y33UpuFO7zwwgMrkJgA4sFwAVNQZQNaN/view?usp=sharing" target="_blank">View Full Thesis (PDF)</a></li>
+        <li><a href="https://drive.google.com/file/d/1VjNA6hOiD0-9ubcV3pZeu3GtCFEUIBv_/view?usp=sharing" target="_blank">View Presentation (PDF)</a></li>
+        <li><a href="https://github.com/adityamishraaaa/RiM.git" target="_blank">GitHub Repository</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
