@@ -385,3 +385,11 @@ form button:hover {
 .gallery-grid {
   display: none;
 }
+
+/* make links inside .container use your primary color */
+.container a {
+  color: var(--primary);
+}
+.container a:hover {
+  color: darken(var(--primary), 10%);
+}
