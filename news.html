@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>News – Aditya Mishra</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ────────── NEWS LAYOUT ────────── */
+    .news-wrapper {
+      margin-top: 2rem;
+    }
+    .news-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+
+    /* LEFT: image (300×300) */
+    .news-item__image img {
+      display: block;
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* SEPARATOR: thin vertical line */
+    .news-item__separator {
+      width: 1px;
+      background-color: #ddd;
+      margin: 0 2rem;
+      align-self: stretch;
+    }
+
+    /* RIGHT: content */
+    .news-item__content {
+      flex: 1;
+    }
+    .news-item__content h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      color: var(--text-dark);
+    }
+    .news-item__content p {
+      margin-bottom: 1rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    .news-item__content a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">Aditya Mishra</div>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Latest News</h2>
+
+    <div class="news-wrapper">
+      <div class="news-item">
+        <!-- LEFT: News image -->
+        <div class="news-item__image">
+          <img src="images/icassp25.jpg" alt="News Image 1">
+        </div>
+
+        <!-- MIDDLE: separator -->
+        <div class="news-item__separator"></div>
+
+        <!-- RIGHT: News content -->
+        <div class="news-item__content">
+          <h3>April 10, 2025: Invited Lecture at IEEE ICASSP 2025</h3>
+          <p style="text-align: justify;">
+            Aditya Mishra delivered a keynote lecture on “EEG Representation Learning with Graph-Convolutional Variational Autoencoders” at IEEE ICASSP 2025 in Hyderabad. 
+            The presentation covered the latest advances in neural representation learning techniques for brain–computer interfaces and highlighted future directions for robust EEG-based models.
+          </p>
+        </div>
+      </div>
+
+      <!-- Repeat .news-item blocks for additional news entries -->
+
+      <div class="news-item">
+        <div class="news-item__image">
+          <img src="images/queens2.jpg" alt="News Image 2">
+        </div>
+        <div class="news-item__separator"></div>
+        <div class="news-item__content">
+          <h3>August 02, 2024: Mitacs Globalink Research Internship Concluded</h3>
+          <p>
+            After a fruitful 12-week internship at Queen’s University in Kingston, Canada, Aditya completed his research on 
+            subject representation learning frameworks. The collaboration produced a publication, accepted at the IEEE ICASSP 2025.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+</body>
+</html>
