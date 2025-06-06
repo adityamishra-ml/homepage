@@ -33,7 +33,7 @@ a {
 /* ─── NAVBAR ───────────────────────────────────────────────────────────────── */
 
 nav {
-  background: #2C3E50;                                        /*var(--bg-nav);*/
+  background: var(--bg-nav);;                                        /*change nav bar BG color here*/
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
@@ -62,7 +62,7 @@ nav ul {
 
 nav a {
   padding-bottom: 0.25rem;
-  color: #fff;           /*var(--text-light);*/
+  color: var(--text-light);;           /*change nav bar text color here*/
   font-weight: 500;
 }
 
