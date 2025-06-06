@@ -33,7 +33,7 @@ a {
 /* ─── NAVBAR ───────────────────────────────────────────────────────────────── */
 
 nav {
-  background: #1e3a8a;                                        /*var(--bg-nav);*/
+  background: #2C3E50;                                        /*var(--bg-nav);*/
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
