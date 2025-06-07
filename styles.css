@@ -72,6 +72,29 @@ nav a.active {
   border-bottom: 2px solid var(--primary);
 }
 
+/* ─── NAVBAR SEARCH ───────────────────────────────────────────────────────── */
+.nav-inner {
+  display: flex;
+  align-items: center;
+}
+
+.nav-search {
+  margin-left: auto;            /* push it all the way to the right */
+  width: 180px;                 /* tweak as needed */
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  color: var(--text-dark);
+  background: #fff;
+}
+
+.nav-search::placeholder {
+  color: var(--text-light);
+  font-style: italic;
+}
+
 /* ─── HEADINGS ──────────────────────────────────────────────────────────────── */
 
 h1, h2, h3 {
