@@ -17,7 +17,7 @@ Visit the live site: [https://adityamishra-ml.github.io/homepage](https://aditya
 - **Research** – Summaries and resources for my thesis and internships  
 - **Projects** – Course assignments & open-source projects, each with abstracts and links to reports, presentations, and repos  
 - **Publications** – A searchable list of my papers with BibTeX snippets  
-- **Gallery** – Auto-advancing & manual-control image carousel with captions  
+- **Gallery** – Auto-advancing & manual-control image carousel with captions  (not in use-file available in the misc directory)
 - **News** – Scrollable feed of my latest talks, awards, & internships  
 - **CV** – Embedded, scrollable PDF of my full curriculum vitae  
 - **Contact** – Email, social profiles, and a contact form  
