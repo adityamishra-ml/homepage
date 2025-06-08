@@ -26,6 +26,7 @@ Visit the live site: [https://adityamishra-ml.github.io/homepage](https://aditya
 
 ## 📂 Repository Structure
 
+```text
 /
 ├── research/ # research html files
 ├── projects/ # projects html files
@@ -42,6 +43,7 @@ Visit the live site: [https://adityamishra-ml.github.io/homepage](https://aditya
 ├── images/ # site assets & photos
 ├── documents/ # embedded PDFs (CV, reports, slides)
 └── README.md
+```
 
 
 ---
@@ -63,11 +65,9 @@ Navigation: Update the <nav> block in each HTML file to add/remove pages or adju
 
 Components:
 
-Carousel: Modify the slides array in scripts/carousel.js.
-
-Search: Wire up the <input class="nav-search"> in scripts/search.js or integrate a static search solution.
-
-PDF Embedder: Swap out cv.pdf in cv.html or adjust the .pdf-container dimensions in styles.css.
+1. Carousel: Modify the slides array in scripts/carousel.js.
+2. Search: Wire up the <input class="nav-search"> in scripts/search.js or integrate a static search solution.
+3. PDF Embedder: Swap out cv.pdf in cv.html or adjust the .pdf-container dimensions in styles.css.
 
 ## 🤝 Contributing
 Contributions, bug reports, and pull requests are welcome!
