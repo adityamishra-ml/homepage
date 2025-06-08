@@ -43,6 +43,7 @@ Visit the live site: [https://adityamishra-ml.github.io/homepage](https://aditya
 ├── styles.css
 ├── images/ # site assets & photos
 ├── documents/ # embedded PDFs (CV, reports, slides)
+├── LICENSE/ #Copyright (c) 2025 Aditya Mishra
 └── README.md
 ```
 
