@@ -59,11 +59,9 @@ Visit the live site: [https://adityamishra-ml.github.io/homepage](https://aditya
 3. Customize content, colors, and assets to make it your own.
 
 ## 🎨 Customization
-Colors & Typography: Adjust CSS variables at the top of styles.css for primary/secondary colors, fonts, and spacing.
-
-Navigation: Update the <nav> block in each HTML file to add/remove pages or adjust active link classes.
-
-Components:
+- Colors & Typography: Adjust CSS variables at the top of styles.css for primary/secondary colors, fonts, and spacing.
+- Navigation: Update the <nav> block in each HTML file to add or remove pages or adjust active link classes.
+- Components:
 
 1. Carousel: Modify the slides array in scripts/carousel.js.
 2. Search: Wire up the <input class="nav-search"> in scripts/search.js or integrate a static search solution.
