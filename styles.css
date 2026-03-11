@@ -26,8 +26,9 @@ a {
 
 .container {
   max-width: 1000px;
+  width: 92%;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
 }
 
 /* ─── NAVBAR ───────────────────────────────────────────────────────────────── */
@@ -341,8 +342,9 @@ form button:hover {
 /* ─── PDF EMBEDDER ─────────────────────────────────────────────────────────── */
 
 .pdf-container {
-  width: 1000px;
-  height: 1000px;
+  width: 100%;
+  max-width: 1000px;
+  height: 80vh;
   margin: 2rem auto;       /* centers horizontally and adds top/bottom spacing */
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border: 1px solid var(--border);
@@ -385,4 +387,44 @@ form button:hover {
 /* hide the old gallery-grid when using carousel */
 .gallery-grid {
   display: none;
+}
+
+/* ─── RESPONSIVE NAVBAR ───────────────────────── */
+
+@media (max-width: 900px) {
+
+  nav .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
