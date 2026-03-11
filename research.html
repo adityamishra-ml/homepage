@@ -17,8 +17,11 @@
 <body>
   <nav>
     <div class="nav-inner">
-      <div class="brand">Aditya Mishra</div>
-      <ul>
+    <div class="brand">Aditya Mishra</div>
+
+    <button class="menu-toggle">☰</button>
+
+    <ul class="nav-menu">
         <li><a href="index.html">About</a></li>
         <li><a href="research.html" class="active">Research</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -26,8 +29,8 @@
         <li><a href="news.html">News</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="cv.html">CV</a></li>
-      </ul>
-    </div>
+    </ul>
+  </div>
   </nav>
 
   <main class="container">
@@ -80,5 +83,13 @@
       </div>
     <!-- you can add more <section class="project-group"> for other orgs -->
   </main>
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".nav-menu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+</script>
 </body>
 </html>

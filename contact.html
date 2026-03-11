@@ -9,8 +9,11 @@
 <body>
   <nav>
     <div class="nav-inner">
-      <div class="brand">Aditya Mishra</div>
-      <ul>
+    <div class="brand">Aditya Mishra</div>
+
+    <button class="menu-toggle">☰</button>
+
+    <ul class="nav-menu">
         <li><a href="index.html">About</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -18,8 +21,8 @@
         <li><a href="news.html">News</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
         <li><a href="cv.html">CV</a></li>
-      </ul>
-    </div>
+    </ul>
+  </div>
   </nav>
 
   <main class="container">
@@ -71,5 +74,13 @@
       I am actively looking for Masters and PhD opportunities in the domain of computer vision and machine learning.
     </p>
   </main>
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".nav-menu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+</script>
 </body>
 </html>
