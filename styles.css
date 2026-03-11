@@ -11,11 +11,15 @@
 }
 
 [data-theme="dark"] {
-  --text-dark: #f3f4f6;
+
+  --text-dark: #ffffff;
   --text-light: #d1d5db;
+
   --border: #374151;
-  --bg-nav: #111827;
-  --bg-page: #030712;
+
+  --bg-nav: #0f172a;
+  --bg-page: #020617;
+
 }
 
 :root {
