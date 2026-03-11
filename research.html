@@ -30,6 +30,13 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="cv.html">CV</a></li>
     </ul>
+  <label class="theme-switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider">
+      <span class="sun">☀</span>
+      <span class="moon">🌙</span>
+    </span>
+  </label>
   </div>
   </nav>
 
@@ -84,12 +91,50 @@
     <!-- you can add more <section class="project-group"> for other orgs -->
   </main>
 <script>
-const toggle = document.querySelector(".menu-toggle");
+
+// hamburger menu
+
+const menuToggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".nav-menu");
 
-toggle.addEventListener("click", () => {
+menuToggle.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
+
+
+// theme toggle
+
+const themeToggle = document.getElementById("theme-toggle");
+
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+function setTheme(theme){
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+}
+
+const savedTheme = localStorage.getItem("theme");
+
+if(savedTheme){
+  setTheme(savedTheme);
+  themeToggle.checked = savedTheme === "dark";
+}
+else if(prefersDark.matches){
+  setTheme("dark");
+  themeToggle.checked = true;
+}
+
+themeToggle.addEventListener("change", () => {
+
+  if(themeToggle.checked){
+    setTheme("dark");
+  }
+  else{
+    setTheme("light");
+  }
+
+});
+
 </script>
 </body>
 </html>
