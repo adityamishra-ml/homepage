@@ -501,7 +501,9 @@ img {
 
 .news-item__separator {
   width: 1px;
-  background-color: #ddd;
+  background-color: var(--border);
+  margin: 0 1.5rem;
+  align-self: stretch;
 }
 
 /* TEXT */
