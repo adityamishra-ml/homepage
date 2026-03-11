@@ -538,4 +538,21 @@ img {
     height: auto;
   }
 
+}/* ─── NEWS MOBILE FIX ───────────────────────── */
+
+@media (max-width: 768px) {
+
+  .news-item {
+    flex-direction: column;
+  }
+
+  .news-item__separator {
+    display: none;
+  }
+
+  .news-item__image img {
+    width: 100%;
+    height: auto;
+  }
+
 }
