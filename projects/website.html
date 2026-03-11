@@ -62,5 +62,51 @@
       </ul>
     </section>
   </main>
+<script>
+
+// hamburger menu
+
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".nav-menu");
+
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+
+
+// theme toggle
+
+const themeToggle = document.getElementById("theme-toggle");
+
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+function setTheme(theme){
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+}
+
+const savedTheme = localStorage.getItem("theme");
+
+if(savedTheme){
+  setTheme(savedTheme);
+  themeToggle.checked = savedTheme === "dark";
+}
+else if(prefersDark.matches){
+  setTheme("dark");
+  themeToggle.checked = true;
+}
+
+themeToggle.addEventListener("change", () => {
+
+  if(themeToggle.checked){
+    setTheme("dark");
+  }
+  else{
+    setTheme("light");
+  }
+
+});
+
+</script>
 </body>
 </html>
