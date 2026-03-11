@@ -473,7 +473,8 @@ img {
     padding: 0.75rem 0;
   }
 
-}/* ────────── NEWS LAYOUT ────────── */
+}
+/* ────────── NEWS LAYOUT ────────── */
 
 .news-wrapper {
   margin-top: 2rem;
@@ -538,12 +539,15 @@ img {
     height: auto;
   }
 
-}/* ─── NEWS MOBILE FIX ───────────────────────── */
+}
+/* ─── NEWS MOBILE FIX ───────────────────────── */
 
 @media (max-width: 768px) {
 
   .news-item {
     flex-direction: column;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
   }
 
   .news-item__separator {
