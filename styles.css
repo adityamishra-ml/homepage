@@ -22,14 +22,6 @@
 
 }
 
-:root {
-  --primary: #1d4ed8;
-  --text-dark: #111;
-  --text-light: #555;
-  --border: #e5e7eb;
-  --bg-nav: #fff;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
