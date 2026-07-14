@@ -126,7 +126,7 @@ input[type="search"] {
   gap: 1.5rem;
 }
 
-.card {
+/* .card {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1rem;
@@ -136,6 +136,23 @@ input[type="search"] {
 
 .card:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+} */
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+[data-theme="dark"] .card:hover {
+    box-shadow: 0 8px 20px rgba(255,255,255,.12);
 }
 
 /* group wrapper spacing */
