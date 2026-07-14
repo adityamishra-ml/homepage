@@ -126,18 +126,6 @@ input[type="search"] {
   gap: 1.5rem;
 }
 
-/* .card {
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem;
-  transition: box-shadow .2s;
-  margin-bottom: 1rem;
-}
-
-.card:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-} */
-
 .card {
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -146,7 +134,8 @@ input[type="search"] {
     transition: transform .25s ease, box-shadow .25s ease;
 }
 
-/* .card:hover {
+/* Card moves up and shadow appears */
+/* .card:hover {                                             
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
 }
@@ -155,6 +144,7 @@ input[type="search"] {
     box-shadow: 0 8px 20px rgba(255,255,255,.12);
 } */
 
+/* subtle blue outline subtle blue outline  */
 .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0,0,0,.12);
